@@ -1,0 +1,17 @@
+.action-column span {
+    padding: 0;
+}
+
+.action-column i {
+    margin-left: 5px;
+}
+.device-pic {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 56px;
+}
+
+.device-image img {
+    max-height: 2em;
+}
+
