@@ -1,0 +1,3 @@
+.hide-description :global(.field-description) {
+    display: none;
+}
