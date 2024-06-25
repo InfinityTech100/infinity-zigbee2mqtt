@@ -77,7 +77,7 @@ jest.mock("connect-gzip-static", () =>
     })
 );
 
-jest.mock('zigbee2mqtt-frontend', () => ({
+jest.mock('@nader3456/zigbee2mqtt-frontend', () => ({
     getPath: () => 'my/dummy/path',
 }));
 

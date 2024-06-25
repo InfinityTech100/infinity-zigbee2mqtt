@@ -1,4 +1,4 @@
-declare module 'zigbee2mqtt-frontend' {
+declare module '@nader3456/zigbee2mqtt-frontend' {
     export function getPath(): string;
 }
 

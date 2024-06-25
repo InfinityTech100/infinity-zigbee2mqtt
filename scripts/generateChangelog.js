@@ -17,8 +17,8 @@ const changelogs = [
         contents: fs.readFileSync(path.join(__dirname, '..', 'node_modules', 'zigbee-herdsman-converters', 'CHANGELOG.md'), 'utf-8').split('\n')},
     {tillVersion: zhTillVersion, project: 'koenkk/zigbee-herdsman',
         contents: fs.readFileSync(path.join(__dirname, '..', 'node_modules', 'zigbee-herdsman', 'CHANGELOG.md'), 'utf-8').split('\n')},
-    {tillVersion: frontendTillVersion, project: 'nurikk/zigbee2mqtt-frontend', isFrontend: true,
-        contents: fs.readFileSync(path.join(__dirname, '..', 'node_modules', 'zigbee2mqtt-frontend', 'CHANGELOG.md'), 'utf-8').split('\n')},
+    {tillVersion: frontendTillVersion, project: '@nader3456/zigbee2mqtt-frontend', isFrontend: true,
+        contents: fs.readFileSync(path.join(__dirname, '..', 'node_modules', '@nader3456/zigbee2mqtt-frontend', 'CHANGELOG.md'), 'utf-8').split('\n')},
 ];
 
 const releaseRe = /## \[(.+)\]/;

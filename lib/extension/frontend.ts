@@ -3,7 +3,7 @@ import https from 'https';
 import gzipStatic, {RequestHandler} from 'connect-gzip-static';
 import finalhandler from 'finalhandler';
 import logger from '../util/logger';
-import frontend from 'zigbee2mqtt-frontend';
+import frontend from '@nader3456/zigbee2mqtt-frontend';
 import WebSocket from 'ws';
 import net from 'net';
 import url from 'url';
