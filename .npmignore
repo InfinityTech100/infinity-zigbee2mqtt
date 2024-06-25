@@ -1,8 +1,28 @@
-**
-!index.js
-!CHANGELOG.md
-!dist/**/*
-dist/report.html
-*.map
-*.map.gz
-.DS_Store
+#tests
+test
+coverage
+
+#build tools
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+.github
+babel.config.js
+tsconfig.tsbuildinfo
+
+#linters
+.jscsrc
+.jshintrc
+.eslintrc*
+.dockerignore
+.eslintignore
+.gitignore
+
+#editor settings
+.vscode
+
+#src
+lib
+docs
+docker
+images

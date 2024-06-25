@@ -1,32 +1,46 @@
+
 module.exports = {
-    plugins: ['react-refresh'],
-    parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-    parserOptions: {
-        ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-        sourceType: 'module', // Allows for the use of imports
-        ecmaFeatures: {
-            jsx: true, // Allows for the parsing of JSX
-        },
+    'env': {
+        'jest/globals': true,
+        'es6': true,
+        'node': true,
     },
-    settings: {
-        react: {
-            version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
-        },
+    'extends': ['eslint:recommended', 'google', 'plugin:jest/recommended', 'plugin:jest/style'],
+    'parserOptions': {
+        'ecmaVersion': 2018,
+        'sourceType': 'module',
     },
-    extends: [
-        'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
-        'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-        // "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-        // "plugin:prettier/recommended", // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    'rules': {
+        'require-jsdoc': 'off',
+        'indent': ['error', 4],
+        'max-len': ['error', {'code': 120}],
+        'no-prototype-builtins': 'off',
+        'linebreak-style': ['error', (process.platform === 'win32' ? 'windows' : 'unix')], // https://stackoverflow.com/q/39114446/2771889
+    },
+    'plugins': [
+        'jest',
     ],
-    rules: {
-        // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-        '@typescript-eslint/ban-ts-comment': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        'react/no-deprecated': 'warn',
-        'react/prop-types': 'off',
-        'react-refresh/only-export-components': 'warn',
-    },
+    'overrides': [{
+        files: ['*.ts'],
+        parser: '@typescript-eslint/parser',
+        plugins: ['@typescript-eslint'],
+        extends: ['plugin:@typescript-eslint/recommended'],
+        parserOptions: {
+            project: './tsconfig.json',
+        },
+        rules: {
+            '@typescript-eslint/await-thenable': 'error',
+            '@typescript-eslint/ban-ts-comment': 'off',
+            '@typescript-eslint/explicit-function-return-type': 'error',
+            '@typescript-eslint/no-empty-function': 'off',
+            '@typescript-eslint/no-explicit-any': 'error',
+            '@typescript-eslint/no-unused-vars': 'error',
+            '@typescript-eslint/semi': ['error'],
+            'array-bracket-spacing': ['error', 'never'],
+            'indent': ['error', 4],
+            'max-len': ['error', {'code': 120}],
+            'no-return-await': 'error',
+            'object-curly-spacing': ['error', 'never'],
+        },
+    }],
 };
