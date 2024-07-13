@@ -182,26 +182,26 @@ export class DeviceInfo extends Component<
                 if: 'software_build_id',
             },
 
-            {
-                key: 'definition.vendor',
-                translationKey: 'manufacturer',
-                if: 'supported',
-                render: (device: Device) => (
-                    <dd className="col-12 col-md-7">
-                        <VendorLink device={device} />
-                    </dd>
-                ),
-            },
-            {
-                key: 'definition.model',
-                translationKey: 'model',
-                if: 'supported',
-                render: (device: Device) => (
-                    <dd className="col-12 col-md-7">
-                        <ModelLink device={device} />
-                    </dd>
-                ),
-            },
+            // {
+            //     key: 'definition.vendor',
+            //     translationKey: 'manufacturer',
+            //     if: 'supported',
+            //     render: (device: Device) => (
+            //         <dd className="col-12 col-md-7">
+            //             <VendorLink device={device} />
+            //         </dd>
+            //     ),
+            // },
+            // {
+            //     key: 'definition.model',
+            //     translationKey: 'model',
+            //     if: 'supported',
+            //     render: (device: Device) => (
+            //         <dd className="col-12 col-md-7">
+            //             <ModelLink device={device} />
+            //         </dd>
+            //     ),
+            // },
 
             {
                 translationKey: 'power',

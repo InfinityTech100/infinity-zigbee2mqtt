@@ -125,26 +125,7 @@ export function DevicesTable(
                     </>
                 ),
             },
-            {
-                id: 'manufacturer',
-                Header: t('manufacturer'),
-                accessor: ({ device }) => [device.definition?.vendor, device.manufacturer].join(' '),
-                Cell: ({
-                    row: {
-                        original: { device },
-                    },
-                }) => <VendorLink device={device} />,
-            },
-            {
-                id: 'model',
-                Header: t('model'),
-                accessor: ({ device }) => [device.definition?.model, device.model_id].join(' '),
-                Cell: ({
-                    row: {
-                        original: { device },
-                    },
-                }) => <ModelLink device={device} />,
-            },
+
             {
                 id: 'lqi',
                 Header: t('lqi'),
